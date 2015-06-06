@@ -1,5 +1,6 @@
 package com.zoomcreativo.rapidogs2;
 
+import android.app.Activity;
 import android.content.Intent;
 import android.os.CountDownTimer;
 import android.support.v7.app.ActionBarActivity;
@@ -9,7 +10,7 @@ import android.view.MenuItem;
 import android.widget.ProgressBar;
 
 
-public class Splash extends ActionBarActivity {
+public class Splash extends Activity {
     private ProgressBar progresito;
 
     @Override

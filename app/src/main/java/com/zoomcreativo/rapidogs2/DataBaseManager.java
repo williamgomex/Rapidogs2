@@ -9,7 +9,7 @@ import android.database.sqlite.SQLiteDatabase;
  * Created by William Gómez O on 02/06/2015.
  */
 public class DataBaseManager {
-    public static final String TABLE_NAME = "rapidogs";
+    public static final String TABLE_NAME = "rapidogs2";
     public static final String CN_ID = "_id";
     public static final String CN_NAME = "nombre";
     public static final String CN_LAT = "latitud";

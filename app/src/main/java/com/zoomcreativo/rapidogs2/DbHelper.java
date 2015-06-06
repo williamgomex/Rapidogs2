@@ -8,7 +8,7 @@ import android.database.sqlite.SQLiteOpenHelper;
  * Created by William Gómez O on 02/06/2015.
  */
 public class DbHelper extends SQLiteOpenHelper {
-    private static final String DB_NAME = "rapidogs.sqlite";
+    private static final String DB_NAME = "rapidogs2.sqlite";
     private static final int DB_SQUEME_VERSION = 1;
 
     public DbHelper (Context context){

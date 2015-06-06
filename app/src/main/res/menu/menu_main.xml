@@ -1,6 +1,11 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools" tools:context=".MainActivity">
-    <item android:id="@+id/action_settings" android:title="@string/action_settings"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context="com.zoomcreativo.rapidogs2.MainActivity">
+    <item android:id="@+id/edicion" android:title="Edición"
+        android:orderInCategory="100" app:showAsAction="never" />
+    <item android:id="@+id/lista" android:title="Lista"
+        android:orderInCategory="100" app:showAsAction="never" />
+    <item android:id="@+id/mapas" android:title="Mapas"
         android:orderInCategory="100" app:showAsAction="never" />
 </menu>
