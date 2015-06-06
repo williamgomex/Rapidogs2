@@ -1,0 +1,24 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.zoomcreativo.turbo_masterdetail.MainActivity"
+    android:orientation="vertical"
+    android:background="#000000"
+    >
+
+    <ImageView
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:src="@drawable/rapidogs"
+        android:layout_weight="1"/>
+
+    <ProgressBar
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_weight="20"
+        android:id="@+id/pbprincipal"
+        style="@android:style/Widget.ProgressBar.Horizontal"/>
+
+
+
+</LinearLayout>
