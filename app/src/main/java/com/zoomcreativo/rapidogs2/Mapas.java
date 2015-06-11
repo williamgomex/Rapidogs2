@@ -1,18 +1,15 @@
 package com.zoomcreativo.rapidogs2;
 
-import android.app.Activity;
+import android.app.Fragment;
+import android.app.FragmentTransaction;
 import android.database.Cursor;
 import android.location.Location;
 import android.location.LocationListener;
-import android.net.Uri;
 import android.os.Bundle;
-import android.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
-import android.widget.EditText;
-import android.widget.Toast;
 
 import com.google.android.gms.common.ConnectionResult;
 import com.google.android.gms.common.api.GoogleApiClient;
@@ -158,6 +155,15 @@ public class Mapas extends Fragment implements GoogleApiClient.ConnectionCallbac
         if(mGoogleApiClient.isConnected()){
             mGoogleApiClient.disconnect();
         }
+        try{
+            Fragment fragment = (getFragmentManager().findFragmentById(R.id.map));
+            FragmentTransaction ft = getActivity().getFragmentManager().beginTransaction();
+            ft.remove(fragment);
+            ft.commit();
+        }
+        catch (Exception e){
+            e.printStackTrace();
+        }
     }
 
     @Override
@@ -166,5 +172,20 @@ public class Mapas extends Fragment implements GoogleApiClient.ConnectionCallbac
         if(!mGoogleApiClient.isConnected()) {
             mGoogleApiClient.connect();
         }
+    }
+
+    @Override
+    public void onDetach() {
+        super.onDetach();
+        try{
+            Fragment fragment = (getFragmentManager().findFragmentById(R.id.map));
+            FragmentTransaction ft = getActivity().getFragmentManager().beginTransaction();
+            ft.remove(fragment);
+            ft.commit();
+        }
+        catch (Exception e){
+            e.printStackTrace();
+        }
+
     }
 }

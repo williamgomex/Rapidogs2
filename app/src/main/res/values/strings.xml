@@ -1,7 +1,17 @@
 <resources>
     <string name="app_name">Rapidogs</string>
 
-    <string name="hello_world">Hello world!</string>
+    <string name="medicion">Edición de lugares</string>
+    <string name="mlistalug">Lista de lugares</string>
+    <string name="mmapa">Mapas</string>
+    <string name="enombre">Nombre:</string>
+    <string name="elatitud">Latitud:</string>
+    <string name="elongitud">Longitud:</string>
+    <string name="einser">Insertar</string>
+    <string name="eelim">Eliminar</string>
+    <string name="eactua">Actualizar</string>
+    <string name="lbuscar">Buscar</string>
+    <string name="mfindme">Encuentrame aquí</string>
     <string name="action_settings">Settings</string>
 
 <!-- TODO: Remove or change this placeholder text -->

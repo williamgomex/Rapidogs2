@@ -1,26 +1,16 @@
 package com.zoomcreativo.rapidogs2;
 
-import android.app.Activity;
 import android.app.FragmentManager;
 import android.app.FragmentTransaction;
-import android.database.Cursor;
-import android.database.CursorIndexOutOfBoundsException;
-import android.os.AsyncTask;
-import android.support.v4.app.FragmentActivity;
-import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
+import android.support.v7.app.ActionBarActivity;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
-import android.widget.EditText;
-import android.widget.ListView;
-import android.widget.SimpleCursorAdapter;
-import android.widget.TextView;
-import android.widget.Toast;
 
 
-public class MainActivity extends ActionBarActivity  {
+public class MainActivity extends ActionBarActivity implements View.OnClickListener{
     static private DataBaseManager Manager;
 
 
@@ -33,7 +23,12 @@ public class MainActivity extends ActionBarActivity  {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         Manager = new DataBaseManager(this);
-
+        Button btncargar = (Button) findViewById(R.id.bedi);
+        btncargar.setOnClickListener(this);
+        Button btninsertar = (Button) findViewById(R.id.blug);
+        btninsertar.setOnClickListener(this);
+        Button btneliminar = (Button) findViewById(R.id.bmap);
+        btneliminar.setOnClickListener(this);
 
 
     }
@@ -76,10 +71,26 @@ public class MainActivity extends ActionBarActivity  {
     }
 
 
+    @Override
+    public void onClick(View v) {
+        FragmentManager fragmentManager = getFragmentManager();
+        FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
 
 
+        if (v.getId() == R.id.bedi) {
+            Edicion fragment = new Edicion();
+            fragmentTransaction.replace(android.R.id.content,fragment).commit();
 
+        }
+        if (v.getId() == R.id.blug) {
+            FragmentRapidogs fragment = new FragmentRapidogs();
+            fragmentTransaction.replace(android.R.id.content,fragment).commit();
 
+        }
+        if (v.getId() == R.id.bmap) {
+            Mapas fragment = new Mapas();
+            fragmentTransaction.replace(android.R.id.content,fragment).commit();
 
-
+        }
+    }
 }
