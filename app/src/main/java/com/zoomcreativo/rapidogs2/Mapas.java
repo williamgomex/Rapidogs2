@@ -50,7 +50,7 @@ public class Mapas extends Fragment implements GoogleApiClient.ConnectionCallbac
             public void onClick(View v) {
                 if(newLocationReady){
                     map.setMapType(GoogleMap.MAP_TYPE_NORMAL);
-                    cameraUpdate = CameraUpdateFactory.newLatLngZoom(currentLocation, 16);
+                    cameraUpdate = CameraUpdateFactory.newLatLngZoom(currentLocation, 15);
                     map.animateCamera(cameraUpdate);
                 }
             }
@@ -80,12 +80,14 @@ public class Mapas extends Fragment implements GoogleApiClient.ConnectionCallbac
         datosna = new String[cursor.getCount()];
         int k=0;
         cursor.moveToFirst();
-        do {
-            datosna[k]=cursor.getString(cursor.getColumnIndex(Manager.CN_NAME));
-            datosla[k]=cursor.getString(cursor.getColumnIndex(Manager.CN_LAT));
-            datoslo[k]=cursor.getString(cursor.getColumnIndex(Manager.CN_LONG));
-            k++;
-        }while(cursor.moveToNext());
+        if(cursor.getCount()>0) {
+            do {
+                datosna[k]=cursor.getString(cursor.getColumnIndex(Manager.CN_NAME));
+                datosla[k]=cursor.getString(cursor.getColumnIndex(Manager.CN_LAT));
+                datoslo[k]=cursor.getString(cursor.getColumnIndex(Manager.CN_LONG));
+                k++;
+            }while(cursor.moveToNext());
+        }
     }
 
     @Override

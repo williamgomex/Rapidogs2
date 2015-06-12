@@ -2,10 +2,10 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     tools:context="com.zoomcreativo.rapidogs2.MainActivity">
-    <item android:id="@+id/edicion" android:title="Edición"
+    <item android:id="@+id/edicion" android:title="@string/medicion"
         android:orderInCategory="100" app:showAsAction="never" />
-    <item android:id="@+id/lista" android:title="Lista"
+    <item android:id="@+id/lista" android:title="@string/mlistalug"
         android:orderInCategory="100" app:showAsAction="never" />
-    <item android:id="@+id/mapas" android:title="Mapas"
+    <item android:id="@+id/mapas" android:title="@string/mmapa"
         android:orderInCategory="100" app:showAsAction="never" />
 </menu>

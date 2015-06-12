@@ -37,6 +37,7 @@
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:id="@+id/EdNombre"
+
                     />
             </LinearLayout>
             <LinearLayout
@@ -56,6 +57,7 @@
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:id="@+id/EdLatitud"
+                    android:inputType="numberDecimal|numberSigned"
                     />
             </LinearLayout>
             <LinearLayout
@@ -75,6 +77,7 @@
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:id="@+id/EdLongitud"
+                    android:inputType="numberDecimal|numberSigned"
                     />
             </LinearLayout>
             <LinearLayout
